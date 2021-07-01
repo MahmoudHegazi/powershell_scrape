@@ -1,7 +1,7 @@
 # $url = 'https://www.google.com';
 # [System.Diagnostics.Process]::Start("chrome.exe","--incognito $url")
 $WSH = New-Object -Com WScript.Shell
-Start("chrome.exe")
+# Start("chrome.exe")
 start chrome https://www.google.com;
 $WSH.AppActivate("chrome");
 $WSH.SendKeys("^+j");
