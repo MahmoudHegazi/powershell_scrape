@@ -19,3 +19,5 @@ start-sleep -Seconds 1;
 $WSH.sendKeys($filename);
 start-sleep -Seconds 1;
 $WSH.sendKeys("~");
+start-sleep -Seconds 1;
+$WSH.SendKeys("%{F4}");
