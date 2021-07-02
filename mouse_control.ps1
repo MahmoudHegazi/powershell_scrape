@@ -8,3 +8,5 @@ $screen.height;
 [Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)";
 # clear console
 $WSH.AppActivate('chrome'); Start-sleep -Seconds 1; $WSH.SendKeys("^+j"); Start-sleep -s 2; $WSH.SendKeys("^l");
+# read js file 
+$myjs = "C://Users/user/app.js"; Get-Content -Path $myjs;
