@@ -22,3 +22,5 @@ start-sleep -Seconds 1;
 $WSH.sendKeys("~");
 start-sleep -Seconds 1;
 $WSH.SendKeys("%{F4}");
+# check if substring of string
+ If ("word test" | %{$_ -match "test"}) { echo Contains String; } else {echo Not Contains String};
