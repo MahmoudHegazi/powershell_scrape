@@ -1,0 +1,1 @@
+$WSH.AppActivate("chrome"); [Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)"; [Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 50),$($screen.Height  - (($screen.Height) / 2) - 48)"; Start-sleep 3s; [W.U32]::mouse_event(6,0,0,0,0);
