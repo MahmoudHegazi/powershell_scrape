@@ -1,1 +1,6 @@
-$WSH.AppActivate("chrome"); [Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)"; [Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 50),$($screen.Height  - (($screen.Height) / 2) - 48)"; Start-sleep 3s; [W.U32]::mouse_event(6,0,0,0,0);
+$WSH.AppActivate("chrome");
+[Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)";
+# for now enter static number one week point of the capcha it's position static too so this number can be static
+# else we can wait js call that will get the input position and send it here
+[Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 50),$($screen.Height  - (($screen.Height) / 2) - 48)";
+Start-sleep -Seconds 3; [W.U32]::mouse_event(6,0,0,0,0);
