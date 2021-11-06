@@ -3,10 +3,13 @@ Add-Type -MemberDefinition '[DllImport("user32.dll")] public static extern void 
 # also set the screen
 Add-Type -AssemblyName System.Windows.Forms;
 $screen = [System.Windows.Forms.SystemInformation]::VirtualScreen;
+start chrome 'https://www.google.com/recaptcha/api2/demo';
+start-sleep -S 1;
+$WSH.AppActivate("chrome");
 # this only for good automation uses and fight the high prices for none worth service not for spam
 $WSH.AppActivate("chrome");
 [Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)";
 # for now enter static number one week point of the capcha it's position static too so this number can be static
 # else we can wait js call that will get the input position and send it here
-[Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 50),$($screen.Height  - (($screen.Height) / 2) - 48)";
+[Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 50),$($screen.Height  - (($screen.Height) / 2) - 70)";
 Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);
