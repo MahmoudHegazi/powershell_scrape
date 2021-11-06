@@ -1,3 +1,8 @@
+#import mouse event first
+Add-Type -MemberDefinition '[DllImport("user32.dll")] public static extern void mouse_event(int flags, int dx, int dy, int cButtons, int info);' -Name U32 -Namespace W;
+# also set the screen
+Add-Type -AssemblyName System.Windows.Forms;
+$screen = [System.Windows.Forms.SystemInformation]::VirtualScreen;
 # this only for good automation uses and fight the high prices for none worth service not for spam
 $WSH.AppActivate("chrome");
 [Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)";
