@@ -1,0 +1,14 @@
+# remove the spaces before use (undateable script becuase it act like normal user) this script static
+# script one less secure  not to make url not ask for email use this https://accounts.google.com/signin/v2/identifier? else use the provided url, but the script work with provided url now
+start chrome 'https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Ftranslate.google.com%2F&ec=GAlAMw&authuser=4&flowName=GlifWebSignIn&flowEntry=AddSession';
+start-sleep -S 1; $WSH.SendKeys("{F12}"); start-sleep -S 1; [Windows.Forms.Cursor]::Position = "$($screen.Width - 100),$($screen.Height - $screen.Height / 2)";
+start-sleep -S 2;[W.U32]::mouse_event(6,0,0,0,0); start-sleep -S 2; $WSH.SendKeys("document"); start-sleep -S 1;
+$WSH.SendKeys("~"); start-sleep -S 1;$WSH.SendKeys(".querySelector{(}{'}input{'}{)}{.}value{=}{'}add-your-gmail-here{'};");start-sleep -S 1;
+$WSH.SendKeys("~"); start-sleep -S 1; $WSH.SendKeys("document");start-sleep -S 1; $WSH.SendKeys("~"); start-sleep -S 1;
+$WSH.SendKeys(".querySelectorAll{(}{'}button{'}{)}{[}2{]}.click{(}{)}~");start-sleep -S 1; $WSH.SendKeys("document");start-sleep -S 1;
+$WSH.SendKeys("~");start-sleep -S 1;$WSH.SendKeys(".querySelector{(}{'}input[type=`"password`"{]}'{)}.value{=}{'}your-password-here");
+start-sleep -S 1; $WSH.SendKeys("';~"); start-sleep -S 2; $WSH.SendKeys("document"); start-sleep -S 1;$WSH.SendKeys("~");
+start-sleep -S 1; $WSH.SendKeys(".querySelectorAll{(}{'}button{'}{)}{[}1{]}.click{(}{)};~");start-sleep -S 2;
+[Windows.Forms.Cursor]::Position = "$($screen.Width - 100),$($screen.Height - $screen.Height / 2)";
+start-sleep -S 2;[W.U32]::mouse_event(6,0,0,0,0); start-sleep -S 2; $WSH.SendKeys("alert{(}'iam robot easy login'{)};~");
+
