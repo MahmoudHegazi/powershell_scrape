@@ -17,3 +17,6 @@ cv2.imshow("Binary", bw_img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
+
+script open console
+https://www.codecademy.com/article/running-javascript-in-the-browser-console
