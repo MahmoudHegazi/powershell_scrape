@@ -20,3 +20,12 @@ cv2.destroyAllWindows()
 
 script open console
 https://www.codecademy.com/article/running-javascript-in-the-browser-console
+
+
+
+
+### short cut to focus console
+1. ctrl + alt + j = > open console
+2. f6 => 5click go in console without focus
+3. uparrow => 5 times force console to display the mouse
+4. your-code-can-writen-fine
