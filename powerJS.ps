@@ -1,0 +1,26 @@
+function document-querySelector {
+     param (
+        [Parameter(Mandatory)]
+        string $ComputerName
+     )
+     $query1 = "document{.}querySelector{(}{'}";
+     $query2 = "{'}{)}";
+     $query = "";
+     $query += $query1
+     $query += $ComputerName;
+     $query += $query2;
+     return $query;
+     Write-Output $ComputerName;
+}
+
+
+function Test-MrParameter {
+
+    param (
+        $ComputerName
+    )
+
+    Write-Output $ComputerName
+
+}
+
