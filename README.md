@@ -1,5 +1,11 @@
 # powershell_scrape
 
+
+#
+$WSH.AppActivate uses the app title usally what seen in app if you need get title of opened window 
+
+```Get-Process | % {$_.MainModule} | ft Product,Description```
+
 Anti Normal I'm not robot captcha.
 ![im_robot_screen_prove](easy_ps.JPG)
 
