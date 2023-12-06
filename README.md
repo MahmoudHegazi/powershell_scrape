@@ -10,6 +10,14 @@ Anti Normal I'm not robot captcha.
 ![im_robot_screen_prove](easy_ps.JPG)
 
 
+#### db work
+for save data in file you can open existing file using notepade
+Start-Process 'C:\Users\Mahmoud\Desktop\facebook_users.txt'
+
+or using notepadd ++ , first is path of app which is notepad++ and second is file name
+Start-Process 'C:\Program Files (x86)\Notepad++\notepad++.exe' 'C:\Users\Mahmoud\Desktop\facebook_users\users.txt'
+
+
 ```python
 convert image to binary
 img = cv2.imread('ff.jpg', 2)
