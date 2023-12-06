@@ -12,11 +12,14 @@ Anti Normal I'm not robot captcha.
 
 #### db work
 for save data in file you can open existing file using notepade
+```ps
 Start-Process 'C:\Users\Mahmoud\Desktop\facebook_users.txt'
+```
 
 or using notepadd ++ , first is path of app which is notepad++ and second is file name
+```ps
 Start-Process 'C:\Program Files (x86)\Notepad++\notepad++.exe' 'C:\Users\Mahmoud\Desktop\facebook_users\users.txt'
-
+```
 
 ```python
 convert image to binary
