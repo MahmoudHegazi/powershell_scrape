@@ -1,0 +1,74 @@
+$WSH = New-Object -Com WScript.Shell;Add-Type -MemberDefinition '[DllImport("user32.dll")] public static extern void mouse_event(int flags, int dx, int dy, int cButtons, int info);' -Name U32 -Namespace W;$screen = [System.Windows.Forms.SystemInformation]::VirtualScreen;start-sleep -S 1;
+$WSH.AppActivate("chrome");
+start-sleep -S 5;
+[Windows.Forms.Cursor]::Position = "$($screen.Width - ($screen.Width / 3)),$(510)";
+Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);
+$wait = GET-Random -Maximum 6;
+
+$username = '';
+for ($i=0; $i -lt 10; $i++){ 
+$rand = 'a',' b',' c',' d',' e',' f',' g',' h',' i',' j',' k',' l',' m',' n',' o',' p',' q',' r',' s',' t',' u',' v',' w',' x',' y',' z' | GET-Random; 
+$username = "$($username)$($rand)";
+}
+
+
+
+hi 
+hi 
+
+
+
+function Get-Random {
+   param([Int32]$i)
+>>   $result = '';
+>>   for ($i=0; $i -lt $max; $i++){
+>>     $rand = 'a',' b',' c',' d',' e',' f',' g',' h',' i',' j',' k',' l',' m',' n',' o',' p',' q',' r',' s',' t',' u',' v',' w',' x',' y',' z';
+>>     $result.join();
+>>   }
+>>   $i;
+>> }
+
+
+
+
+
+$WSH = New-Object -Com WScript.Shell;Add-Type -MemberDefinition '[DllImport("user32.dll")] public static extern void mouse_event(int flags, int dx, int dy, int cButtons, int info);' -Name U32 -Namespace W;$screen = [System.Windows.Forms.SystemInformation]::VirtualScreen;start-sleep -S 1;
+$WSH.AppActivate("chrome");
+start-sleep -S 5;
+[Windows.Forms.Cursor]::Position = "$($screen.Width - ($screen.Width / 3)),$(510)";
+Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);
+$wait = GET-Random -Maximum 6;
+
+function Get-RandomStr {
+   param([Int32] $max)
+   $result = "";
+   $rand = 'a',' b',' c',' d',' e',' f',' g',' h',' i',' j',' k',' l',' m',' n',' o',' p',' q',' r',' s',' t',' u',' v',' w',' x',' y',' z';
+   for ($i=0; $i -lt $max; $i++){
+     $random = $rand | Get-Random;
+     $result += $random;
+   }
+   $result.replace(" ", "");
+}
+
+$facebook_form = [PSCustomObject] @{
+   FirstName = "$(680),$(420)";
+   Surname = "$(900),$(420)";
+   Email = "$(800),$(470)";
+   Password = "$(840),$(520)";
+   BirthDay = "$(700),$(585)";
+   BirthMonth = "$(840),$(585)";
+   BirthYear = "$(970),$(585)";
+   Gender = "$(868),$(655)", "$(743),$(655)" | Get-Random;
+   submit = "$(830), $(790)";
+}
+
+
+$user = [PSCustomObject] @{
+   rands = @((Get-Random -Minimum 5 -Maximum 30), (Get-Random -Minimum 3 -Maximum 24), (Get-Random -Minimum 8 -Maximum 34));
+   FirstName = 'ahmed', 'john', 'mic', 'toson', 'mansor', 'elhafny', 'ninja', 'super', 'mario', 'man', 'the', 'hecelese', 'mazen', 'khaled', 'sayd', 'mido', 'python', 'king', 'noob', 'lord', 'hi', 'tester', 'your', 'theninja', 'sad', 'button', 'developer', 'hacker', 'ninjaturtle' | Get-Random;
+   Surname = Get-RandomStr $user.rands[0];
+   email = (Get-RandomStr $user.rands[1]) + "@gmail.com";
+   pass = Get-RandomStr $user.rands[2];
+}
+
+
