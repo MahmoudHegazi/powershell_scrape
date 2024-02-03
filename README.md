@@ -1,6 +1,6 @@
 # powershell_scrape
 
-
+https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualbasic.devices.keyboard.sendkeys?view=windowsdesktop-8.0
 #
 $WSH.AppActivate uses the app title usally what seen in app if you need get title of opened window 
 
