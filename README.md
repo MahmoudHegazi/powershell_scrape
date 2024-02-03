@@ -38,7 +38,19 @@ cv2.destroyAllWindows()
 script open console
 https://www.codecademy.com/article/running-javascript-in-the-browser-console
 
+```powershell
 
+$youtube = [PSCustomObject] @{
+  SearchInput = "450,115";
+  Clear = "^a{BS}";
+};
+
+function search(){
+     param([string] $term)
+     $WSH.AppActivate("chrome"); start-sleep -S 1;[Windows.Forms.Cursor]::Position =$youtube.SearchInput;Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);$WSH.sendKeys("^a");start-sleep -Miliseconds 100;$WSH.sendKeys("{BS}");Start-sleep -S 1;$WSH.sendKeys($term);$WSH.sendKeys("~");
+}
+
+```
 
 
 ### short cut to focus console
