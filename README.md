@@ -52,6 +52,30 @@ function search(){
 
 ```
 
+## Scrape by JS dynamic diffrent music websites 
+music dynamic almost all websites scraper change player
+```javascript
+const srcs = [];
+let timer = 0;
+function getbyCons(elm){
+  elm.click();
+  setTimeout(()=>{
+      const allAudios = document.querySelectorAll("audio");
+      const len = allAudios.length;
+      if (len > 0 && !srcs.includes(allAudios[len-1].src)){
+         srcs.push(allAudios[len-1].src);
+         console.log("got new url", allAudios[len-1].src);
+      }
+  }, 30);
+}
+// iam player selector change me (add scroll for get all)
+const btnClicks = document.querySelectorAll(".section--2-dWA.left--XGHpP button[aria-label='Play']");
+btnClicks.forEach((elm, i)=>{
+    console.log("loop is fast", i, timer);
+    setTimeout(()=>{getbyCons(elm);}, timer);
+    timer += 2000;
+});
+```
 
 ### short cut to focus console
 1. ctrl + alt + j = > open console
