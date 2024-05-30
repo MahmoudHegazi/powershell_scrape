@@ -11,41 +11,5 @@ $WSH.AppActivate("chrome");
 [Windows.Forms.Cursor]::Position = "$($screen.Width - $screen.Width / 2),$($screen.Height - $screen.Height / 2)";
 # for now enter static number one week point of the capcha it's position static too so this number can be static
 # else we can wait js call that will get the input position and send it here
-[Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 50),$($screen.Height  - (($screen.Height) / 2) - 70)";
-Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);
-
-
-# TopLeft
-$h = $screen.Height;$w = $screen.Width;
-[Windows.Forms.Cursor]::Position = "$($wq*0),$($wh*0)";
-$wq = [math]::Round($($w*025/100));
-$hq = [math]::Round($($h*025/100));
-
-
-# top-left
-[Windows.Forms.Cursor]::Position = "$($wq*0),$($wh*0)";
-
-
-# center
-[Windows.Forms.Cursor]::Position = "$($wq*2),$($wh*2)";
-
-# new directions
-
-# center-top
-[Windows.Forms.Cursor]::Position = "$($wq*2),$($wh*0)";
-
-# center-bottom
-[Windows.Forms.Cursor]::Position = "$($wq*2),$($wh*4)";
-
-# left-center
-[Windows.Forms.Cursor]::Position = "$($wq*0),$($wh*2)";
-
-# left-center
-[Windows.Forms.Cursor]::Position = "$($wq*0),$($wh*2)";
-
-
-# bottom-right
-[Windows.Forms.Cursor]::Position = "$($wq*4),$($wh*4)";
-
-# bottom-right
-[Windows.Forms.Cursor]::Position = "$($wq*4),$($wh*4)";
+[Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 60),$($screen.Height  - (($screen.Height) / 2) - 30)";
+Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);Start-sleep -Seconds 3;[Windows.Forms.Cursor]::Position = "$(($screen.Width - $screen.Width) + 60),$($screen.Height  - (($screen.Height) / 2) + 40)";Start-sleep -Seconds 1; [W.U32]::mouse_event(6,0,0,0,0);
